@@ -1,7 +1,7 @@
 {
-  "name": "furnart-website-proto",
-  "version": "1.0.2",
-  "description": "Vue, Nuxt PWA website project prototype",
+  "name": "furnart",
+  "version": "1.0.3",
+  "description": "Vue, Nuxt PWA website",
   "author": "Ilya Novikov",
   "private": true,
   "scripts": {

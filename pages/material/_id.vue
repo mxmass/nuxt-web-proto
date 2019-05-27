@@ -34,16 +34,18 @@
           pa-5
         >
           <v-img
+            v-if="front.samples.length"
             :src="front.samples[0].location"
             contain
             @click="'/front/'+front._id"
           />
           <v-img
+            v-if="front.cutimage"
             :src="front.cutimage.location"
             max-height="35px"
             contain
           />
-          <v-card-text v-if="front.samples.length">
+          <v-card-text>
             {{ front.name }}
           </v-card-text>
         </v-card>
@@ -82,10 +84,6 @@ export default {
     })
   },
   mounted() {
-    console.log(this.material)
-    console.log(this.list)
-    console.log(this.fronts.length)
-    console.log(this.materials)
     if (!this.fronts.length) this.setFronts(this.list)
     if (this.fronts.length) {
       this.filtered = this.filterFrontsByMaterial(

@@ -57,7 +57,10 @@
         order-md4
         order-sm3
       >
-        <div class="slide">
+        <div
+          v-if="selected.elements"
+          class="slide"
+        >
           <Elements
             :data="selected.elements"
             @openZoom="openZoom"
